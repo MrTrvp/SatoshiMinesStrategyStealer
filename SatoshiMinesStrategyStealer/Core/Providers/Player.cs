@@ -47,7 +47,6 @@ namespace SatoshiMinesStrategyStealer.Core.Providers
             using (var response = await _client.SendAsync(request))
             {   
                 var content = await response.Content.ReadAsStringAsync();
-
                 var gameResponse = JsonHelper.Deserialize<GameResponse>(content);
                 return new Game(gameResponse, _client);
             }  
@@ -64,7 +63,7 @@ namespace SatoshiMinesStrategyStealer.Core.Providers
                 })))
             {
                 var content = await response.Content.ReadAsStringAsync();
-                return JsonHelper.Deserialize<WithdrawResponse>(content);
+                return WithdrawResponse.WithdrawResponseFromMessage(content);
             }
         }
 
@@ -81,7 +80,6 @@ namespace SatoshiMinesStrategyStealer.Core.Providers
             using (var response = await _client.SendAsync(request))
             {
                 var content = await response.Content.ReadAsStringAsync();
-
                 var balanceResponse = JsonHelper.Deserialize<RefreshBalanceResponse>(content);
                 return !balanceResponse.Status.Equals("success") ? 0 : (int)(balanceResponse.Balance * 100000);
             }                                                                                 

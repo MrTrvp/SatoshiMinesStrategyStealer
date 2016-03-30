@@ -40,33 +40,33 @@
             this.plMines.AutoSize = true;
             this.plMines.Location = new System.Drawing.Point(270, 57);
             this.plMines.Name = "plMines";
-            this.plMines.Prefix = "Mines:";
+            this.plMines.Prefix = "Mines: ";
             this.plMines.RealText = null;
-            this.plMines.Size = new System.Drawing.Size(44, 13);
+            this.plMines.Size = new System.Drawing.Size(48, 13);
             this.plMines.TabIndex = 2;
-            this.plMines.Text = "Mines:";
+            this.plMines.Text = "Mines: ";
             // 
             // plGuesses
             // 
             this.plGuesses.AutoSize = true;
             this.plGuesses.Location = new System.Drawing.Point(270, 105);
             this.plGuesses.Name = "plGuesses";
-            this.plGuesses.Prefix = "Guesses:";
+            this.plGuesses.Prefix = "Guesses: ";
             this.plGuesses.RealText = null;
-            this.plGuesses.Size = new System.Drawing.Size(60, 13);
+            this.plGuesses.Size = new System.Drawing.Size(64, 13);
             this.plGuesses.TabIndex = 2;
-            this.plGuesses.Text = "Guesses:";
+            this.plGuesses.Text = "Guesses: ";
             // 
             // plBet
             // 
             this.plBet.AutoSize = true;
             this.plBet.Location = new System.Drawing.Point(270, 153);
             this.plBet.Name = "plBet";
-            this.plBet.Prefix = "Bet:";
+            this.plBet.Prefix = "Bet: ";
             this.plBet.RealText = null;
-            this.plBet.Size = new System.Drawing.Size(31, 13);
+            this.plBet.Size = new System.Drawing.Size(35, 13);
             this.plBet.TabIndex = 2;
-            this.plBet.Text = "Bet:";
+            this.plBet.Text = "Bet: ";
             // 
             // smgMain
             // 
@@ -82,11 +82,11 @@
             this.plWon.AutoSize = true;
             this.plWon.Location = new System.Drawing.Point(270, 201);
             this.plWon.Name = "plWon";
-            this.plWon.Prefix = "Won:";
+            this.plWon.Prefix = "Won: ";
             this.plWon.RealText = null;
-            this.plWon.Size = new System.Drawing.Size(36, 13);
+            this.plWon.Size = new System.Drawing.Size(40, 13);
             this.plWon.TabIndex = 2;
-            this.plWon.Text = "Won:";
+            this.plWon.Text = "Won: ";
             // 
             // PlayedGameForm
             // 

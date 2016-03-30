@@ -50,9 +50,8 @@
             this.pgMain = new System.Windows.Forms.PropertyGrid();
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiStartStrategy = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiWithdrawToWallet = new System.Windows.Forms.ToolStripMenuItem();
             this.smgMain = new SatoshiMinesStrategyStealer.UI.Controls.SatoshiMinesGrid();
-            this.withdrawToWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cashoutFromGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsLiveGames.SuspendLayout();
             this.cmsMain.SuspendLayout();
             this.SuspendLayout();
@@ -211,17 +210,23 @@
             // 
             this.cmsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiStartStrategy,
-            this.cashoutFromGameToolStripMenuItem,
-            this.withdrawToWalletToolStripMenuItem});
+            this.tsmiWithdrawToWallet});
             this.cmsMain.Name = "cmsMain";
-            this.cmsMain.Size = new System.Drawing.Size(184, 70);
+            this.cmsMain.Size = new System.Drawing.Size(178, 70);
             // 
             // tsmiStartStrategy
             // 
             this.tsmiStartStrategy.Name = "tsmiStartStrategy";
-            this.tsmiStartStrategy.Size = new System.Drawing.Size(183, 22);
+            this.tsmiStartStrategy.Size = new System.Drawing.Size(177, 22);
             this.tsmiStartStrategy.Text = "Start Strategy";
             this.tsmiStartStrategy.Click += new System.EventHandler(this.tsmiStartStrategy_Click);
+            // 
+            // tsmiWithdrawToWallet
+            // 
+            this.tsmiWithdrawToWallet.Name = "tsmiWithdrawToWallet";
+            this.tsmiWithdrawToWallet.Size = new System.Drawing.Size(177, 22);
+            this.tsmiWithdrawToWallet.Text = "Withdraw To Wallet";
+            this.tsmiWithdrawToWallet.Click += new System.EventHandler(this.tsmiWithdrawToWallet_Click);
             // 
             // smgMain
             // 
@@ -233,18 +238,6 @@
             this.smgMain.TabIndex = 11;
             this.smgMain.Text = "satoshiMinesGrid1";
             this.smgMain.OnCashoutClicked += new System.EventHandler(this.smgMain_OnCashoutClicked);
-            // 
-            // withdrawToWalletToolStripMenuItem
-            // 
-            this.withdrawToWalletToolStripMenuItem.Name = "withdrawToWalletToolStripMenuItem";
-            this.withdrawToWalletToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.withdrawToWalletToolStripMenuItem.Text = "Withdraw To Wallet";
-            // 
-            // cashoutFromGameToolStripMenuItem
-            // 
-            this.cashoutFromGameToolStripMenuItem.Name = "cashoutFromGameToolStripMenuItem";
-            this.cashoutFromGameToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.cashoutFromGameToolStripMenuItem.Text = "Cashout From Game";
             // 
             // MainForm
             // 
@@ -287,7 +280,6 @@
         private System.Windows.Forms.ContextMenuStrip cmsMain;
         private System.Windows.Forms.ToolStripMenuItem tsmiStartStrategy;
         private System.Windows.Forms.ToolStripMenuItem tsmiViewDetailsForSelected;
-        private System.Windows.Forms.ToolStripMenuItem cashoutFromGameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem withdrawToWalletToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiWithdrawToWallet;
     }
 }

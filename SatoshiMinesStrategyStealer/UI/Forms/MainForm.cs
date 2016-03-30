@@ -144,25 +144,6 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
             tsmiFollowSelected.Text = "Follow";
         }
 
-        private void tsmiStartLoadingStrategy_Click(object sender, EventArgs e)
-        {
-            if (tsmiStartLoadingStrategy.Text == "Start Loading Strategy")
-            {
-                if (lvLiveGames.Items.Count != 0)
-                {
-                    var result = MessageBox.Show("Would you like to clear all previous live games?");
-                    if (result == DialogResult.OK)
-                       lvLiveGames.Clear();
-                }
-                _tracker.Start();
-                tsmiStartLoadingStrategy.Text = "Stop Loading Strategy";
-                return;
-            }
-
-            _tracker.Stop();
-            tsmiStartLoadingStrategy.Text = "Start Loading Strategy";
-        }
-         
         private async void tsmiStartStrategy_Click(object sender, EventArgs e)
         {
             if (tsmiStartStrategy.Text == "Start Strategy")
@@ -218,6 +199,34 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
             tsmiStartStrategy.Text = "Start Strategy";
         }
 
+        private void tsmiWithdrawToWallet_Click(object sender, EventArgs e)
+        {
+            if (_currentPlayer == null)
+                return;
+
+            using (var withdrawForm = new WithdrawForm(_currentPlayer))
+                withdrawForm.ShowDialog();
+        }
+
+        private void tsmiStartLoadingStrategy_Click(object sender, EventArgs e)
+        {
+            if (tsmiStartLoadingStrategy.Text == "Start Loading Strategy")
+            {
+                if (lvLiveGames.Items.Count != 0)
+                {
+                    var result = MessageBox.Show("Would you like to clear all previous live games?");
+                    if (result == DialogResult.OK)
+                       lvLiveGames.Clear();
+                }
+                _tracker.Start();
+                tsmiStartLoadingStrategy.Text = "Stop Loading Strategy";
+                return;
+            }
+
+            _tracker.Stop();
+            tsmiStartLoadingStrategy.Text = "Start Loading Strategy";
+        }
+         
         private void tsmiFollowSelected_Click(object sender, EventArgs e)
         {
             if (tsmiFollowSelected.Text == "Follow Selected")
