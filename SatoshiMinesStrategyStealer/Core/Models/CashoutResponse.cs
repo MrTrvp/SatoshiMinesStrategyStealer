@@ -3,22 +3,6 @@
 namespace SatoshiMinesStrategyStealer.Core.Models
 {
     [DataContract]
-    public class WithdrawResponse
-    {
-        [DataMember(Name = "status")]
-        public string Status { get; set; }
-
-        [DataMember(Name = "message")]
-        public string Message { get; set; }
-
-        [DataMember(Name = "txid")]
-        public string Txid { get; set; }
-            
-        [DataMember(Name = "balance")]
-        public int Balance { get; set; }  
-    }
-
-    [DataContract]
     public class CashoutResponse
     {
         [DataMember(Name = "status")]

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web;
 using Quobject.SocketIoClientDotNet.Client;         
-using SatoshiMinesStrategyStealer.Core.Models;
-using SatoshiMinesStrategyStealer.Core.Models.Enums;
+using SatoshiMinesStrategyStealer.Core.Models;          
 
 namespace SatoshiMinesStrategyStealer.Core.Providers
 {

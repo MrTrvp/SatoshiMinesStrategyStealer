@@ -28,7 +28,7 @@ namespace SatoshiMinesStrategyStealer.Core.Helpers
         {
             var deserializer = new DataContractJsonSerializer(typeof(T));
             using (var stream = new MemoryStream(Encoding.UTF8.GetBytes(json)))
-                return (T)deserializer.ReadObject(stream);
+                return (T) deserializer.ReadObject(stream);
         }
     }
 }

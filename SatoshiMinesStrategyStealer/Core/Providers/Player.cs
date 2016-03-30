@@ -60,7 +60,7 @@ namespace SatoshiMinesStrategyStealer.Core.Providers
                 {
                     {"secret", PlayerHash},
                     {"payto_address", address},
-                    {"amount", (amount/1000000).ToString("0.000000", new CultureInfo("en-US"))}
+                    {"amount", (amount / 1000000).ToString("0.000000", new CultureInfo("en-US"))}
                 })))
             {
                 var content = await response.Content.ReadAsStringAsync();

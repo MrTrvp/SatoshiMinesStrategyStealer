@@ -92,6 +92,6 @@ namespace SatoshiMinesStrategyStealer.Core.Models
                 SetExtraGameResponseFields(gameResponse);
 
             return gameResponses;
-        }   
+        }
     }
 }

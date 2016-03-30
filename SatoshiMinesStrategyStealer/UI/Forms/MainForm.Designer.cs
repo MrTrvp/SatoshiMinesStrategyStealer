@@ -46,11 +46,13 @@
             this.tsmiClear = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiStartLoadingStrategy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFollowSelected = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiViewDetailsForSelected = new System.Windows.Forms.ToolStripMenuItem();
             this.pgMain = new System.Windows.Forms.PropertyGrid();
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiStartStrategy = new System.Windows.Forms.ToolStripMenuItem();
             this.smgMain = new SatoshiMinesStrategyStealer.UI.Controls.SatoshiMinesGrid();
-            this.tsmiViewDetailsForSelected = new System.Windows.Forms.ToolStripMenuItem();
+            this.withdrawToWalletToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cashoutFromGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsLiveGames.SuspendLayout();
             this.cmsMain.SuspendLayout();
             this.SuspendLayout();
@@ -190,6 +192,13 @@
             this.tsmiFollowSelected.Text = "Follow Selected";
             this.tsmiFollowSelected.Click += new System.EventHandler(this.tsmiFollowSelected_Click);
             // 
+            // tsmiViewDetailsForSelected
+            // 
+            this.tsmiViewDetailsForSelected.Name = "tsmiViewDetailsForSelected";
+            this.tsmiViewDetailsForSelected.Size = new System.Drawing.Size(202, 22);
+            this.tsmiViewDetailsForSelected.Text = "View Details for Selected";
+            this.tsmiViewDetailsForSelected.Click += new System.EventHandler(this.tsmiViewDetailsForSelected_Click);
+            // 
             // pgMain
             // 
             this.pgMain.CategoryForeColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -201,14 +210,16 @@
             // cmsMain
             // 
             this.cmsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiStartStrategy});
+            this.tsmiStartStrategy,
+            this.cashoutFromGameToolStripMenuItem,
+            this.withdrawToWalletToolStripMenuItem});
             this.cmsMain.Name = "cmsMain";
-            this.cmsMain.Size = new System.Drawing.Size(145, 26);
+            this.cmsMain.Size = new System.Drawing.Size(184, 70);
             // 
             // tsmiStartStrategy
             // 
             this.tsmiStartStrategy.Name = "tsmiStartStrategy";
-            this.tsmiStartStrategy.Size = new System.Drawing.Size(144, 22);
+            this.tsmiStartStrategy.Size = new System.Drawing.Size(183, 22);
             this.tsmiStartStrategy.Text = "Start Strategy";
             this.tsmiStartStrategy.Click += new System.EventHandler(this.tsmiStartStrategy_Click);
             // 
@@ -223,12 +234,17 @@
             this.smgMain.Text = "satoshiMinesGrid1";
             this.smgMain.OnCashoutClicked += new System.EventHandler(this.smgMain_OnCashoutClicked);
             // 
-            // tsmiViewDetailsForSelected
+            // withdrawToWalletToolStripMenuItem
             // 
-            this.tsmiViewDetailsForSelected.Name = "tsmiViewDetailsForSelected";
-            this.tsmiViewDetailsForSelected.Size = new System.Drawing.Size(202, 22);
-            this.tsmiViewDetailsForSelected.Text = "View Details for Selected";
-            this.tsmiViewDetailsForSelected.Click += new System.EventHandler(this.tsmiViewDetailsForSelected_Click);
+            this.withdrawToWalletToolStripMenuItem.Name = "withdrawToWalletToolStripMenuItem";
+            this.withdrawToWalletToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.withdrawToWalletToolStripMenuItem.Text = "Withdraw To Wallet";
+            // 
+            // cashoutFromGameToolStripMenuItem
+            // 
+            this.cashoutFromGameToolStripMenuItem.Name = "cashoutFromGameToolStripMenuItem";
+            this.cashoutFromGameToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.cashoutFromGameToolStripMenuItem.Text = "Cashout From Game";
             // 
             // MainForm
             // 
@@ -271,5 +287,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsMain;
         private System.Windows.Forms.ToolStripMenuItem tsmiStartStrategy;
         private System.Windows.Forms.ToolStripMenuItem tsmiViewDetailsForSelected;
+        private System.Windows.Forms.ToolStripMenuItem cashoutFromGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem withdrawToWalletToolStripMenuItem;
     }
 }

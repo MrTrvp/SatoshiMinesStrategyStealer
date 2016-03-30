@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="Core\Extensions\StringExtensions.cs" />
     <Compile Include="Core\Helpers\GuessHelper.cs" />
     <Compile Include="Core\Helpers\JsonHelper.cs" />
     <Compile Include="Core\Models\CashoutResponse.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Core\Models\GameResponse.cs" />
     <Compile Include="Core\Models\GuessResponse.cs" />
     <Compile Include="Core\Models\RefreshBalanceResponse.cs" />
+    <Compile Include="Core\Models\WithdrawResponse.cs" />
     <Compile Include="Core\Providers\Game.cs" />
     <Compile Include="Core\Providers\LiveGameTracker.cs" />
     <Compile Include="Core\Providers\Player.cs" />

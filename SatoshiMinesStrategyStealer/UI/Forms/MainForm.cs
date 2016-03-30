@@ -83,7 +83,6 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
             try
             {
                 var strategyType = Config.Settings.StrategyType;
-
                 switch (strategyType)
                 {
                     case StrategyType.RandomGuessFromAll:
