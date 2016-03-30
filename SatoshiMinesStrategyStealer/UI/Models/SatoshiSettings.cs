@@ -33,12 +33,5 @@ namespace SatoshiMinesStrategyStealer.UI.Models
         [DisplayName("Mines*")]
         [Description("Mines to be challenged with. None to use games's mines.")]
         public Mines Mines { get; set; } = Mines.Three;
-
-        public SatoshiMinesSettings()
-        {
-            PlayerHash = "1edcba5bde97b68d38322455498ba500a11bd6de";
-            WithdrawAddress = "1edcba5bde97b68d38322455498ba500a11bd6de";
-            Mines = Mines.None;
-        }
     }
 }

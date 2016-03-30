@@ -31,8 +31,6 @@ namespace SatoshiMinesStrategyStealer.UI.Controls
         }
 
         public string FullText
-        {
-            get { return string.Concat(Prefix, _realText); }
-        }
+            => string.Concat(Prefix, _realText);
     }
 }

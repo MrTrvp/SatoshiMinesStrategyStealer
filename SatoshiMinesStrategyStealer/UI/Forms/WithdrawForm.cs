@@ -21,7 +21,7 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
             await ShowBalance();
         }
 
-        private async void btnWithdraw_Click(object sender, System.EventArgs e)
+        private async void btnWithdraw_Click(object sender, EventArgs e)
         {
             try
             {

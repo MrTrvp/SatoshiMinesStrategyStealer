@@ -14,9 +14,8 @@
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+                components.Dispose();       
+
             base.Dispose(disposing);
         }
 
@@ -92,8 +91,7 @@
             this.lblBalance.Size = new System.Drawing.Size(205, 13);
             this.lblBalance.TabIndex = 7;
             this.lblBalance.Text = "Current Balance (Click to Refresh)";
-            this.lblBalance.Click += new System.EventHandler(this.lblBalance_Click);
-            this.lblBalance.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblBalance_MouseDoubleClick);
+            this.lblBalance.Click += new System.EventHandler(this.lblBalance_Click);                                              
             // 
             // lblAddress
             // 
