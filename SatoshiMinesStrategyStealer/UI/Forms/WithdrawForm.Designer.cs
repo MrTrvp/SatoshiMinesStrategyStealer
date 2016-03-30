@@ -43,7 +43,7 @@
             // 
             this.btnWithdraw.Location = new System.Drawing.Point(139, 140);
             this.btnWithdraw.Name = "btnWithdraw";
-            this.btnWithdraw.Size = new System.Drawing.Size(75, 22);
+            this.btnWithdraw.Size = new System.Drawing.Size(75, 24);
             this.btnWithdraw.TabIndex = 3;
             this.btnWithdraw.Text = "Withdraw";
             this.btnWithdraw.UseVisualStyleBackColor = true;
@@ -82,6 +82,7 @@
             this.nudBalance.ReadOnly = true;
             this.nudBalance.Size = new System.Drawing.Size(202, 21);
             this.nudBalance.TabIndex = 6;
+            this.nudBalance.Click += new System.EventHandler(this.nudBalance_Click);
             // 
             // lblBalance
             // 
@@ -91,6 +92,8 @@
             this.lblBalance.Size = new System.Drawing.Size(205, 13);
             this.lblBalance.TabIndex = 7;
             this.lblBalance.Text = "Current Balance (Click to Refresh)";
+            this.lblBalance.Click += new System.EventHandler(this.lblBalance_Click);
+            this.lblBalance.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lblBalance_MouseDoubleClick);
             // 
             // lblAddress
             // 

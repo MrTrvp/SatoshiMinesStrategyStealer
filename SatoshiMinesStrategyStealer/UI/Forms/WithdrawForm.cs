@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using SatoshiMinesStrategyStealer.Core.Providers;
 
@@ -17,7 +18,7 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
          
         private async void WithdrawForm_Load(object sender, EventArgs e)
         {
-            nudBalance.Value = await _player.GetBalance();
+            await ShowBalance();
         }
 
         private async void btnWithdraw_Click(object sender, System.EventArgs e)
@@ -28,7 +29,7 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
                     throw new Exception("The withdraw address can not be empty.");
 
                 if (nudAmount.Value == 0)
-                    throw new Exception("The withdraw ammount can not be 0.");
+                    throw new Exception("The withdraw amount can not be 0.");
 
                 var amount = (int) nudAmount.Value;
                 var response = await _player.Withdraw(amount, tbAddress.Text);
@@ -45,6 +46,21 @@ namespace SatoshiMinesStrategyStealer.UI.Forms
             {
                 MessageBox.Show($"Error: {ex}");
             }
-        }  
+        }
+        
+        private async void lblBalance_Click(object sender, EventArgs e)
+        {
+            await ShowBalance();
+        }
+
+        private async void nudBalance_Click(object sender, EventArgs e)
+        {
+            await ShowBalance();
+        }
+
+        private async Task ShowBalance()
+        {
+            nudBalance.Value = await _player.GetBalance();
+        }        
     }
 }         
